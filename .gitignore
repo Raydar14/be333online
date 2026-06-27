@@ -1,0 +1,8 @@
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Source zip — kept locally for reference, not needed in the deployed repo
+be333-site.zip
