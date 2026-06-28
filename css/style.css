@@ -7,16 +7,17 @@
 
 /* ----- Tokens ------------------------------------------------ */
 :root {
-  /* color — gold lotus + deep forest green */
-  --cream:       #FBF8F0;   /* page background, warm ivory */
+  /* color — matched to the be333.app palette */
+  --cream:       #FFFCEF;   /* page background, warm cornsilk */
   --cloud:       #FFFDF7;   /* raised cards */
-  --ink:         #1A2E22;   /* primary text, deep forest */
-  --ink-soft:    #4A5A4F;   /* secondary text, muted sage */
-  --green:       #1F5C3A;   /* brand primary, BE333 green */
-  --green-deep:  #0E3D26;   /* deep brand, hovers + accents */
-  --gold:        #D4AF37;   /* warm gold accent */
-  --gold-soft:   #F0DA85;   /* pale ivory gold, lotus petal */
-  --line:        #E8E1CC;   /* warm sand hairlines */
+  --ink:         #1A4331;   /* primary text, deep forest (app dominant) */
+  --ink-soft:    #5D6E63;   /* secondary text, muted sage */
+  --green:       #2D6A4F;   /* brand primary, mid forest (app secondary) */
+  --green-deep:  #1A4331;   /* deep brand, hovers + dark surfaces */
+  --sage:        #4A9977;   /* soft sage accent for hairlines + rings */
+  --gold:        #E1B725;   /* warm gold, app brand accent */
+  --gold-soft:   #FFF8DC;   /* cornsilk cream highlight */
+  --line:        #E8DEB8;   /* warm cornsilk-tinted hairlines */
   --gold-deep:   #B8932F;   /* deep gold, used sparingly */
 
   /* type */
@@ -33,10 +34,10 @@
   --r-lg: 30px;
   --pill: 999px;
 
-  /* depth — soft, deep-green tinted */
-  --shadow-sm: 0 4px 14px -8px rgba(14, 61, 38, .25);
-  --shadow-md: 0 18px 40px -22px rgba(14, 61, 38, .35);
-  --shadow-lg: 0 30px 70px -30px rgba(14, 61, 38, .40);
+  /* depth — soft, deep-forest tinted (matches app's #1A4331) */
+  --shadow-sm: 0 4px 14px -8px rgba(26, 67, 49, .25);
+  --shadow-md: 0 18px 40px -22px rgba(26, 67, 49, .35);
+  --shadow-lg: 0 30px 70px -30px rgba(26, 67, 49, .40);
 }
 
 /* ----- Reset / base ----------------------------------------- */
@@ -56,9 +57,9 @@ body {
   text-rendering: optimizeLegibility;
   /* dawn light: soft, layered radial glows behind everything */
   background-image:
-    radial-gradient(60vw 50vh at 82% -8%, rgba(212, 175, 55, .22), transparent 60%),
-    radial-gradient(55vw 55vh at 5% 5%, rgba(31, 92, 58, .14), transparent 60%),
-    radial-gradient(70vw 60vh at 50% 120%, rgba(212, 175, 55, .16), transparent 60%);
+    radial-gradient(60vw 50vh at 82% -8%, rgba(225, 183, 37, .20), transparent 60%),
+    radial-gradient(55vw 55vh at 5% 5%, rgba(74, 153, 119, .14), transparent 60%),
+    radial-gradient(70vw 60vh at 50% 120%, rgba(225, 183, 37, .14), transparent 60%);
   background-attachment: fixed;
 }
 
@@ -111,18 +112,18 @@ p { margin: 0 0 1.1em; }
 }
 .eyebrow::before {
   content: ""; width: 26px; height: 1px;
-  background: var(--gold);
+  background: var(--sage);
 }
 .eyebrow--center { justify-content: center; }
 .eyebrow--center::after {
-  content: ""; width: 26px; height: 1px; background: var(--gold);
+  content: ""; width: 26px; height: 1px; background: var(--sage);
 }
 
 /* ----- Header (injected by js/script.js) -------------------- */
 .site-header {
   position: sticky; top: 0; z-index: 100;
   backdrop-filter: saturate(140%) blur(12px);
-  background: rgba(251, 248, 240, .8);
+  background: rgba(255, 252, 239, .82);
   border-bottom: 1px solid var(--line);
 }
 .site-header__inner {
@@ -175,11 +176,11 @@ p { margin: 0 0 1.1em; }
   background: var(--green-deep); color: #fff;
   box-shadow: var(--shadow-md);
 }
-.btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); background: #072E1B; }
+.btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); background: #102B1F; }
 .btn--ghost {
-  background: transparent; color: var(--green-deep); border-color: var(--gold);
+  background: transparent; color: var(--green-deep); border-color: var(--sage);
 }
-.btn--ghost:hover { transform: translateY(-2px); background: rgba(212,175,55,.18); }
+.btn--ghost:hover { transform: translateY(-2px); background: rgba(74, 153, 119, .14); }
 .btn--lg { padding: 1rem 1.9rem; font-size: 1.05rem; }
 
 /* ----- Hero + breathing orb (signature) --------------------- */
@@ -214,7 +215,7 @@ p { margin: 0 0 1.1em; }
 }
 .breath__ring {
   position: absolute; inset: 0; margin: auto; border-radius: 50%;
-  border: 1px solid var(--gold); opacity: .5;
+  border: 1px solid var(--sage); opacity: .5;
 }
 .breath__ring--1 { width: 100%; height: 100%; animation: ripple 8s ease-in-out infinite; }
 .breath__ring--2 { width: 78%;  height: 78%;  animation: ripple 8s ease-in-out infinite .15s; opacity: .65; }
@@ -222,14 +223,14 @@ p { margin: 0 0 1.1em; }
   width: 56%; height: 56%; border-radius: 50%;
   background:
     radial-gradient(circle at 38% 32%, #ffffff 0%, var(--gold-soft) 28%, var(--gold) 65%, var(--gold-deep) 100%);
-  box-shadow: 0 24px 60px -18px rgba(14, 61, 38, .55), inset 0 0 40px rgba(255,255,255,.35);
+  box-shadow: 0 24px 60px -18px rgba(26, 67, 49, .55), inset 0 0 40px rgba(255,255,255,.35);
   animation: breathe 8s ease-in-out infinite;
   display: grid; place-items: center; position: relative;
 }
 .breath__label {
   position: absolute; inset: 0; display: grid; place-items: center;
   font-family: var(--display); font-style: italic; font-size: 1.25rem;
-  color: #fff; letter-spacing: .02em; text-shadow: 0 1px 10px rgba(14, 61, 38, .5);
+  color: #fff; letter-spacing: .02em; text-shadow: 0 1px 10px rgba(26, 67, 49, .5);
 }
 .breath__label span { grid-area: 1/1; opacity: 0; }
 .breath__label .in  { animation: phase 8s ease-in-out infinite; }
@@ -277,12 +278,12 @@ p { margin: 0 0 1.1em; }
 }
 .band::after {
   content: ""; position: absolute; inset: 0;
-  background: radial-gradient(40vw 40vw at 88% -20%, rgba(240, 218, 133, .35), transparent 60%);
+  background: radial-gradient(40vw 40vw at 88% -20%, rgba(255, 248, 220, .35), transparent 60%);
   pointer-events: none;
 }
 .band__inner { padding: clamp(2.6rem, 6vw, 4.5rem); position: relative; z-index: 1; }
 .band .eyebrow { color: var(--gold-soft); }
-.band .eyebrow::before { background: rgba(240, 218, 133, .65); }
+.band .eyebrow::before { background: rgba(255, 248, 220, .7); }
 .band__quote {
   font-family: var(--display); font-weight: 360; font-style: italic;
   font-size: clamp(1.5rem, 3.6vw, 2.4rem); line-height: 1.25; color: #fff;
@@ -298,7 +299,7 @@ p { margin: 0 0 1.1em; }
 .teaser__list li::before {
   content: ""; flex: none; width: 9px; height: 9px; margin-top: .55rem;
   border-radius: 50%; background: var(--gold-soft);
-  box-shadow: 0 0 0 4px rgba(212, 175, 55, .28);
+  box-shadow: 0 0 0 4px rgba(74, 153, 119, .22);
 }
 .teaser__list b { color: var(--ink); font-weight: 600; }
 
@@ -324,14 +325,14 @@ p { margin: 0 0 1.1em; }
 .prose ul li { position: relative; padding-left: 1.6rem; }
 .prose ul li::before {
   content: ""; position: absolute; left: 0; top: .65rem;
-  width: 7px; height: 7px; border-radius: 50%; background: var(--gold);
+  width: 7px; height: 7px; border-radius: 50%; background: var(--sage);
 }
 .prose ul ul { margin-top: .7rem; }
 
 .pillar-tag {
   display: inline-block; font-family: var(--body); font-weight: 600;
   font-size: .72rem; letter-spacing: .12em; text-transform: uppercase;
-  color: var(--green); background: rgba(212, 175, 55, .18);
+  color: var(--green); background: rgba(225, 183, 37, .16);
   padding: .35rem .75rem; border-radius: var(--pill); margin-bottom: 1rem;
 }
 
@@ -341,7 +342,7 @@ table { width: 100%; border-collapse: collapse; background: var(--cloud); font-s
 thead th {
   text-align: left; font-family: var(--body); font-weight: 600; font-size: .8rem;
   letter-spacing: .04em; text-transform: uppercase; color: var(--green-deep);
-  background: rgba(212, 175, 55, .14); padding: .9rem 1.1rem;
+  background: rgba(225, 183, 37, .12); padding: .9rem 1.1rem;
 }
 tbody td { padding: .9rem 1.1rem; border-top: 1px solid var(--line); color: var(--ink-soft); vertical-align: top; }
 tbody td:first-child { color: var(--ink); font-weight: 600; }
@@ -430,7 +431,7 @@ tbody td:first-child { color: var(--ink); font-weight: 600; }
   .nav { gap: .9rem; }
   .nav__links {
     position: fixed; inset: 68px 0 auto 0;
-    background: rgba(251, 248, 240, .97); backdrop-filter: blur(14px);
+    background: rgba(255, 252, 239, .97); backdrop-filter: blur(14px);
     flex-direction: column; align-items: flex-start; gap: 0;
     padding: .6rem 1.4rem 1.4rem; border-bottom: 1px solid var(--line);
     transform: translateY(-130%); transition: transform .3s ease, visibility .3s; box-shadow: var(--shadow-md);

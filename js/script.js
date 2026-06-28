@@ -12,12 +12,12 @@
   var LOTUS =
     '<svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">' +
     '<g transform="translate(24 41)">' +
-    '<path d="M0 0 C-7 -8 -5 -18 0 -22 C5 -18 7 -8 0 0 Z" transform="rotate(-54)" fill="#F0DA85"/>' +
-    '<path d="M0 0 C-7 -8 -5 -18 0 -22 C5 -18 7 -8 0 0 Z" transform="rotate(54)" fill="#F0DA85"/>' +
-    '<path d="M0 0 C-7 -9 -5 -20 0 -25 C5 -20 7 -9 0 0 Z" transform="rotate(-27)" fill="#D4AF37"/>' +
-    '<path d="M0 0 C-7 -9 -5 -20 0 -25 C5 -20 7 -9 0 0 Z" transform="rotate(27)" fill="#D4AF37"/>' +
+    '<path d="M0 0 C-7 -8 -5 -18 0 -22 C5 -18 7 -8 0 0 Z" transform="rotate(-54)" fill="#F2D680"/>' +
+    '<path d="M0 0 C-7 -8 -5 -18 0 -22 C5 -18 7 -8 0 0 Z" transform="rotate(54)" fill="#F2D680"/>' +
+    '<path d="M0 0 C-7 -9 -5 -20 0 -25 C5 -20 7 -9 0 0 Z" transform="rotate(-27)" fill="#E1B725"/>' +
+    '<path d="M0 0 C-7 -9 -5 -20 0 -25 C5 -20 7 -9 0 0 Z" transform="rotate(27)" fill="#E1B725"/>' +
     '<path d="M0 0 C-6 -10 -4 -23 0 -28 C4 -23 6 -10 0 0 Z" fill="#B8932F"/>' +
-    '<path d="M0 -2 C-2 -10 -1.4 -20 0 -24 C1.4 -20 2 -10 0 -2 Z" fill="#F8EAB0" opacity="0.9"/>' +
+    '<path d="M0 -2 C-2 -10 -1.4 -20 0 -24 C1.4 -20 2 -10 0 -2 Z" fill="#FFF8DC" opacity="0.9"/>' +
     "</g></svg>";
 
   // Nav links (one source of truth)
