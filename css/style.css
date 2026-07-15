@@ -1,24 +1,24 @@
 /* ===========================================================
-   BE333 — Just Sit & BE for 3
+   BE333 - Just Sit & BE for 3
    DARK theme, matched to be333.app: deep forest base, cornsilk
    text, gold as the brand accent that pops on dark surfaces.
-   Token names are kept stable across themes — see comments
+   Token names are kept stable across themes - see comments
    for what each one actually does in dark mode.
    =========================================================== */
 
 /* ----- Tokens ------------------------------------------------ */
 :root {
-  /* color — dark forest, cornsilk, gold */
-  --cream:       #1A4331;   /* PAGE BG — app's dominant deep forest */
-  --cloud:       #234E3A;   /* RAISED SURFACES — cards, notify, header */
-  --ink:         #FFF8DC;   /* PRIMARY TEXT — cornsilk on dark */
-  --ink-soft:    #D8E1D3;   /* SECONDARY TEXT — soft cream-sage, readable on dark */
-  --green:       #E1B725;   /* PRIMARY ACCENT — gold (links, brand b, em) */
-  --green-deep:  #FFCC2E;   /* STRONGER ACCENT — bright gold (hovers) */
+  /* color - dark forest, cornsilk, gold */
+  --cream:       #1A4331;   /* PAGE BG - app's dominant deep forest */
+  --cloud:       #234E3A;   /* RAISED SURFACES - cards, notify, header */
+  --ink:         #FFF8DC;   /* PRIMARY TEXT - cornsilk on dark */
+  --ink-soft:    #D8E1D3;   /* SECONDARY TEXT - soft cream-sage, readable on dark */
+  --green:       #E1B725;   /* PRIMARY ACCENT - gold (links, brand b, em) */
+  --green-deep:  #FFCC2E;   /* STRONGER ACCENT - bright gold (hovers) */
   --sage:        #4A9977;   /* soft sage for hairlines, rings, dots */
   --gold:        #E1B725;   /* warm brand gold */
   --gold-soft:   #FFF8DC;   /* cornsilk cream highlight */
-  --line:        rgba(255, 248, 220, .14);   /* HAIRLINES — light on dark */
+  --line:        rgba(255, 248, 220, .14);   /* HAIRLINES - light on dark */
   --gold-deep:   #FFCC2E;   /* bright gold, sparingly */
 
   /* type */
@@ -35,7 +35,7 @@
   --r-lg: 30px;
   --pill: 999px;
 
-  /* depth — drop shadows on the deep-forest base */
+  /* depth - drop shadows on the deep-forest base */
   --shadow-sm: 0 4px 14px -8px rgba(0, 0, 0, .35);
   --shadow-md: 0 18px 40px -22px rgba(0, 0, 0, .50);
   --shadow-lg: 0 30px 70px -30px rgba(0, 0, 0, .55);

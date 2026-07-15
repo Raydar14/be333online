@@ -1,13 +1,13 @@
-# BE333 — static site
+# BE333 - static site
 
 A hand-built static version of **be333.online**, ready for GitHub Pages.
-Calm meditation brand: *Pause. Breathe. Be. — three minutes, three times a day, three weeks.*
+Calm meditation brand: *Pause. Breathe. Be. - three minutes, three times a day, three weeks.*
 
 ## Files
 
 ```
 be333/
-├── index.html        ← home (must stay named index.html — see note below)
+├── index.html        ← home (must stay named index.html - see note below)
 ├── research.html     ← the research behind BE333
 ├── download.html     ← get the app + notify form
 ├── css/style.css     ← all styling + design tokens (:root)
@@ -19,16 +19,16 @@ be333/
 └── README.md         ← this file
 ```
 
-The header and footer are **not** copied into each page — `js/script.js` builds them
+The header and footer are **not** copied into each page - `js/script.js` builds them
 once and injects them, so edit the nav or footer in that one file.
 
 ## Three things to fill in before launch
 
-1. **Formspree form ID** — in `download.html`, replace `YOUR_FORM_ID` in the form
+1. **Formspree form ID** - in `download.html`, replace `YOUR_FORM_ID` in the form
    `action` with your real Formspree ID (e.g. `https://formspree.io/f/abcdwxyz`).
-2. **App store links** — in `download.html`, replace the two `href="#"` on the
+2. **App store links** - in `download.html`, replace the two `href="#"` on the
    App Store / Google Play buttons once you have store URLs.
-3. **Social links** — in `js/script.js` (the footer block), replace the three
+3. **Social links** - in `js/script.js` (the footer block), replace the three
    `href="#"` for Bluesky, Goodreads, and Reddit.
 
 Optional: add `assets/favicon.png` (a 180×180 PNG lotus) for the Apple touch icon,
@@ -49,7 +49,7 @@ and `assets/og-image.png` (1200×630) for nicer link previews. The site works wi
 3. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
    branch `main`, folder `/ (root)`. Save.
 4. **Custom domain:** the `CNAME` file already says `be333.online`. In GoDaddy DNS, point the
-   domain at GitHub Pages — four A records for the apex and a CNAME for `www`:
+   domain at GitHub Pages - four A records for the apex and a CNAME for `www`:
    ```
    A     @    185.199.108.153
    A     @    185.199.109.153
@@ -63,7 +63,7 @@ and `assets/og-image.png` (1200×630) for nicer link previews. The site works wi
 
 If GitHub Pages ever shows this README instead of the site, it means it can't find
 `index.html` at the root. Make sure `index.html` sits at the **top level** of the repo
-(or of the `/docs` folder if you choose that as the source) — not nested in a subfolder.
+(or of the `/docs` folder if you choose that as the source) - not nested in a subfolder.
 The `.nojekyll` file is included to keep Pages from doing anything clever with the files.
 
 ## What changed from the WordPress version

@@ -1,5 +1,5 @@
 /* ===========================================================
-   BE333 — shared chrome + interactions
+   BE333 - shared chrome + interactions
    Injects the header and footer into every page, marks the
    active nav link, runs the mobile menu, and reveals sections
    on scroll. Page content lives in each HTML file; only the
