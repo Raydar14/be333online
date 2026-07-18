@@ -13,7 +13,8 @@ be333/
 ├── css/style.css     ← all styling + design tokens (:root)
 ├── js/script.js      ← injects the shared header/footer, mobile nav, scroll reveals
 ├── assets/
-│   └── favicon.svg   ← lotus mark (used for the logo and the browser tab)
+│   ├── lotus.svg     ← branded lotus (favicon + injected header/footer logo + hero orb)
+│   └── og-image.png  ← 1:1 marketing preview for social shares (link previews)
 ├── CNAME             ← be333.online
 ├── .nojekyll         ← tells GitHub Pages to serve files as-is
 └── README.md         ← this file
@@ -31,8 +32,9 @@ once and injects them, so edit the nav or footer in that one file.
 3. **Social links** - in `js/script.js` (the footer block), replace the three
    `href="#"` for Bluesky, Goodreads, and Reddit.
 
-Optional: add `assets/favicon.png` (a 180×180 PNG lotus) for the Apple touch icon,
-and `assets/og-image.png` (1200×630) for nicer link previews. The site works without them.
+Optional: add `assets/favicon.png` (a 180×180 PNG lotus) for the Apple touch
+icon — iOS ignores SVG favicons for the home-screen bookmark, so a raster is
+nice-to-have. The site works fine without it.
 
 ## Deploy to GitHub Pages
 
