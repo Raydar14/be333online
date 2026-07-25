@@ -14,11 +14,12 @@
     '<img class="brand__be"    src="assets/logo/be.svg"   alt="" aria-hidden="true">' +
     '<img class="brand__333"   src="assets/logo/333.svg"  alt="" aria-hidden="true">';
 
-  // Nav links (one source of truth)
+  // Nav links (one source of truth). external:true → renders as the gold
+  // primary CTA, opens in a new tab, and is never marked aria-current.
   var LINKS = [
-    { href: "index.html",    label: "Home" },
-    { href: "research.html", label: "Research" },
-    { href: "download.html", label: "Download" }
+    { href: "index.html",      label: "Home" },
+    { href: "research.html",   label: "Research" },
+    { href: "https://be333.app", label: "Open App", external: true }
   ];
 
   // Which page are we on?
@@ -32,9 +33,10 @@
   function buildHeader() {
     var cur = currentFile();
     var items = LINKS.map(function (l) {
-      var active = l.href === cur ? ' aria-current="page"' : "";
-      var cls = l.href === "download.html" ? ' class="btn btn--primary"' : "";
-      return '<a href="' + l.href + '"' + active + cls + ">" + l.label + "</a>";
+      var active = !l.external && l.href === cur ? ' aria-current="page"' : "";
+      var cls    = l.external ? ' class="btn btn--primary"' : "";
+      var extra  = l.external ? ' target="_blank" rel="noopener"' : "";
+      return '<a href="' + l.href + '"' + active + cls + extra + ">" + l.label + "</a>";
     }).join("");
 
     return (
