@@ -8,8 +8,11 @@
 (function () {
   "use strict";
 
-  // Lotus mark reused in header + footer (matches be333.app branding)
-  var LOTUS = '<img class="brand__lotus" src="assets/lotus.svg" alt="" aria-hidden="true">';
+  // Brand wordmark: real lotus + BE + 333 SVGs used across header + footer
+  var BRAND_MARK =
+    '<img class="brand__lotus" src="assets/lotus.svg"     alt="" aria-hidden="true">' +
+    '<img class="brand__be"    src="assets/logo/be.svg"   alt="" aria-hidden="true">' +
+    '<img class="brand__333"   src="assets/logo/333.svg"  alt="" aria-hidden="true">';
 
   // Nav links (one source of truth)
   var LINKS = [
@@ -38,8 +41,7 @@
       '<header class="site-header">' +
         '<div class="site-header__inner">' +
           '<a class="brand" href="index.html" aria-label="BE333 home">' +
-            LOTUS +
-            '<span class="brand__word">BE<b>333</b></span>' +
+            BRAND_MARK +
           "</a>" +
           '<nav class="nav" aria-label="Primary">' +
             '<button class="nav-toggle" aria-expanded="false" aria-controls="navlinks" aria-label="Menu">' +
@@ -60,7 +62,7 @@
         '<div class="site-footer__inner">' +
           "<div>" +
             '<a class="brand" href="index.html" aria-label="BE333 home">' +
-              LOTUS + '<span class="brand__word">BE<b>333</b></span>' +
+              BRAND_MARK +
             "</a>" +
             '<p class="foot-tag">A 3-minute meditation habit, created by a clinical psychologist. Pause. Breathe. Be.</p>' +
           "</div>" +

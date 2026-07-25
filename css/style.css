@@ -132,18 +132,13 @@ p { margin: 0 0 1.1em; }
   display: flex; align-items: center; justify-content: space-between;
   height: 76px;
 }
-.brand { display: inline-flex; align-items: center; gap: .7rem; text-decoration: none; }
-.brand svg,
-.brand__lotus { width: 36px; height: 36px; display: block; }
-.brand__word {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: 1.5rem;
-  letter-spacing: .02em;
-  color: var(--ink);
-  font-variation-settings: "opsz" 30, "wght" 600;
-}
-.brand__word b { color: var(--green); font-weight: 500; }
+.brand { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; }
+.brand__lotus { width: 44px; height: 44px; flex: none; display: block; }
+.brand__be    { height: 32px; width: auto;  flex: none; display: block; margin-left: .2rem; }
+.brand__333   { height: 34px; width: auto;  flex: none; display: block; margin-left: -.1rem; }
+.site-footer .brand__lotus { width: 40px; height: 40px; }
+.site-footer .brand__be    { height: 28px; }
+.site-footer .brand__333   { height: 30px; }
 
 .nav { display: flex; align-items: center; gap: .8rem; }
 .nav__links { display: flex; align-items: center; gap: clamp(.4rem, 2vw, 1.6rem); }
@@ -274,11 +269,11 @@ p { margin: 0 0 1.1em; }
 }
 .card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
 .card__num {
-  font-family: var(--display); font-size: 3.8rem; line-height: 1;
+  font-family: var(--display); line-height: 1;
   color: var(--green); font-variation-settings: "opsz" 144, "SOFT" 50, "wght" 380;
-  display: block; margin-bottom: .2rem;
+  display: inline-flex; align-items: flex-end; gap: .55rem; margin-bottom: .3rem;
 }
-.card__num em { font-style: italic; font-size: 1.2rem; color: var(--ink-soft); margin-left: .35rem; }
+.card__num em { font-style: italic; font-size: 1.35rem; color: var(--ink-soft); padding-bottom: .55rem; }
 .card h3 { font-size: clamp(1.45rem, 1.3rem + 0.4vw, 1.7rem); margin: .4rem 0 .55rem; }
 .card p { color: var(--ink-soft); margin: 0; font-size: 1.08rem; line-height: 1.6; }
 
@@ -408,7 +403,19 @@ tbody td:first-child { color: var(--ink); font-weight: 700; }
   padding-block: 3rem 2.4rem;
   display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem;
 }
-.site-footer .brand__word { font-size: 1.2rem; }
+/* triad "3" glyph (hero) — sits inline with the italic display text */
+.triad-glyph {
+  height: 2.2rem; width: auto;
+  vertical-align: -.55rem;
+  display: inline-block;
+  margin: 0 .05rem;
+}
+
+/* big "3" glyph on the how-it-works cards */
+.card__num-glyph {
+  height: 4.8rem; width: auto;
+  display: block;
+}
 .foot-tag { color: var(--ink-soft); font-size: 1.05rem; max-width: 32ch; margin-top: .9rem; line-height: 1.55; }
 .foot-col h4 {
   font-family: var(--body); font-weight: 700; font-size: .9rem; letter-spacing: .14em;
