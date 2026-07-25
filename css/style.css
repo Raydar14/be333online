@@ -205,6 +205,15 @@ p { margin: 0 0 1.1em; }
 .hero__triad span { font-size: 1.85rem; font-variation-settings: "opsz" 30, "wght" 500; }
 .hero__triad i { width: 5px; height: 5px; border-radius: 50%; background: var(--gold-soft); display: inline-block; }
 .hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.hero__avail {
+  margin: 1rem 0 0; font-size: .95rem; color: var(--ink-soft);
+  display: inline-flex; align-items: center; gap: .6rem;
+  letter-spacing: .01em;
+}
+.hero__avail i {
+  width: 4px; height: 4px; border-radius: 50%; background: var(--sage);
+  display: inline-block;
+}
 
 /* the orb */
 .breath {
@@ -315,6 +324,14 @@ p { margin: 0 0 1.1em; }
 .cta-final { text-align: center; }
 .cta-final h2 { font-size: clamp(2.4rem, 5.5vw, 3.6rem); margin-bottom: .8rem; }
 .cta-final p { color: var(--ink-soft); max-width: 48ch; margin-inline: auto; margin-bottom: 2rem; font-size: 1.15rem; }
+.cta-final__note {
+  margin: 1.1rem 0 0; font-size: .95rem; color: var(--ink-soft);
+  display: inline-flex; align-items: center; gap: .6rem; justify-content: center;
+}
+.cta-final__note i {
+  width: 4px; height: 4px; border-radius: 50%; background: var(--sage);
+  display: inline-block;
+}
 
 /* ----- Prose (research page) -------------------------------- */
 .prose { max-width: 760px; }
@@ -364,7 +381,20 @@ tbody td:first-child { color: var(--ink); font-weight: 700; }
 /* ----- Download page ---------------------------------------- */
 .dl { text-align: center; }
 .dl__orbwrap { width: min(100%, 300px); margin: 0 auto 1.5rem; }
-.stores { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: 1.8rem 0 1.2rem; }
+
+/* primary web-app CTA on download page */
+.dl__primary { margin: 2rem 0 2.4rem; }
+.dl__primary .btn--primary { padding: 1.15rem 2.4rem; font-size: 1.2rem; }
+.dl__url {
+  margin: .7rem 0 0; font-size: .95rem; color: var(--ink-soft);
+  font-family: var(--body); letter-spacing: .02em;
+}
+
+.dl__soon-label {
+  margin: 2.2rem 0 .6rem; font-size: .82rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-soft); font-weight: 600;
+}
+.stores { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; margin: .4rem 0 1.6rem; }
 .store {
   display: inline-flex; align-items: center; gap: .8rem;
   background: #102B1F; color: var(--ink); text-decoration: none;
@@ -377,6 +407,14 @@ tbody td:first-child { color: var(--ink); font-weight: 700; }
 .store svg { width: 28px; height: 28px; flex: none; }
 .store small { display: block; font-size: .78rem; opacity: .85; line-height: 1.2; letter-spacing: .02em; }
 .store b { display: block; font-size: 1.18rem; font-weight: 700; line-height: 1.2; }
+
+/* "coming soon" store buttons — visually dimmed, no hover lift */
+.store--soon {
+  opacity: .55;
+  cursor: default;
+  filter: saturate(.7);
+}
+.store--soon:hover { transform: none; box-shadow: var(--shadow-sm); }
 
 .notify {
   max-width: 460px; margin: 2.4rem auto 0; background: var(--cloud);
