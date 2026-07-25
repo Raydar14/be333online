@@ -74,10 +74,7 @@
           "</div>" +
           '<div class="foot-col">' +
             "<h4>Follow</h4>" +
-            // TODO: replace # with your real profile URLs
-            '<a href="#" rel="me">Bluesky</a>' +
-            '<a href="#" rel="me">Goodreads</a>' +
-            '<a href="#" rel="me">Reddit</a>' +
+            '<a href="https://www.reddit.com/user/Be333app" rel="me" target="_blank">Reddit</a>' +
           "</div>" +
         "</div>" +
         '<div class="foot-bottom">' +
