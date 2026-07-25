@@ -74,7 +74,11 @@
           "</div>" +
           '<div class="foot-col">' +
             "<h4>Follow</h4>" +
-            '<a href="https://www.reddit.com/user/Be333app" rel="me" target="_blank">Reddit</a>' +
+            '<a href="https://www.instagram.com/be333app"    rel="me" target="_blank">Instagram</a>' +
+            '<a href="https://www.tiktok.com/@be333app"      rel="me" target="_blank">TikTok</a>' +
+            '<a href="https://www.youtube.com/@Be333app"     rel="me" target="_blank">YouTube</a>' +
+            '<a href="https://www.facebook.com/Be333app"     rel="me" target="_blank">Facebook</a>' +
+            '<a href="https://www.reddit.com/user/Be333app"  rel="me" target="_blank">Reddit</a>' +
           "</div>" +
         "</div>" +
         '<div class="foot-bottom">' +
