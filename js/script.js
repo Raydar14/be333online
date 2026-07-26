@@ -8,11 +8,10 @@
 (function () {
   "use strict";
 
-  // Brand wordmark: real lotus + BE + 333 SVGs used across header + footer
+  // Brand wordmark: zoomed lotus mark + combined BE333 mark, tightly kerned
   var BRAND_MARK =
-    '<img class="brand__lotus" src="assets/lotus.svg"     alt="" aria-hidden="true">' +
-    '<img class="brand__be"    src="assets/logo/be.svg"   alt="" aria-hidden="true">' +
-    '<img class="brand__333"   src="assets/logo/333.svg"  alt="" aria-hidden="true">';
+    '<img class="brand__lotus" src="assets/logo/lotus-mark.svg" alt="" aria-hidden="true">' +
+    '<img class="brand__be333" src="assets/logo/be333.svg"      alt="" aria-hidden="true">';
 
   // Nav links (one source of truth). external:true → renders as the gold
   // primary CTA, opens in a new tab, and is never marked aria-current.

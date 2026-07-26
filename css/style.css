@@ -135,13 +135,11 @@ p { margin: 0 0 1.1em; }
   display: flex; align-items: center; justify-content: space-between;
   height: 76px;
 }
-.brand { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; }
-.brand__lotus { width: 44px; height: 44px; flex: none; display: block; }
-.brand__be    { height: 32px; width: auto;  flex: none; display: block; margin-left: .2rem; }
-.brand__333   { height: 34px; width: auto;  flex: none; display: block; margin-left: -.1rem; }
-.site-footer .brand__lotus { width: 40px; height: 40px; }
-.site-footer .brand__be    { height: 28px; }
-.site-footer .brand__333   { height: 30px; }
+.brand { display: inline-flex; align-items: center; gap: 0; text-decoration: none; }
+.brand__lotus { width: 60px; height: 60px; flex: none; display: block; }
+.brand__be333 { height: 42px; width: auto; flex: none; display: block; margin-left: -.1rem; }
+.site-footer .brand__lotus { width: 52px; height: 52px; }
+.site-footer .brand__be333 { height: 36px; }
 
 .nav { display: flex; align-items: center; gap: .8rem; }
 .nav__links { display: flex; align-items: center; gap: clamp(.4rem, 2vw, 1.6rem); }
