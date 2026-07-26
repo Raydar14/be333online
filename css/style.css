@@ -196,6 +196,13 @@ p { margin: 0 0 1.1em; }
   font-style: italic; color: var(--green);
   font-variation-settings: "opsz" 144, "SOFT" 60, "wght" 400;
 }
+/* the BE brand glyph standing in for the italic "Be" in the hero title */
+.hero__title-be {
+  height: .82em; width: auto;
+  display: inline-block;
+  vertical-align: -.06em;
+  margin-right: .04em;
+}
 .hero__lead { font-size: clamp(1.2rem, 1.1rem + 0.4vw, 1.45rem); color: var(--ink); max-width: 32ch; margin-bottom: 1.6rem; line-height: 1.55; }
 .hero__triad {
   display: inline-flex; align-items: center; gap: .9rem;
