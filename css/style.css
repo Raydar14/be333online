@@ -119,6 +119,9 @@ p { margin: 0 0 1.1em; }
 .eyebrow--center::after {
   content: ""; width: 26px; height: 1px; background: var(--sage);
 }
+/* opt-out of the little sage dash before an eyebrow */
+.eyebrow--bare::before { display: none; }
+.eyebrow--bare { gap: 0; }
 
 /* ----- Header (injected by js/script.js) -------------------- */
 .site-header {
