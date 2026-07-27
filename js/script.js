@@ -81,6 +81,11 @@
             '<a href="https://www.facebook.com/Be333app"     rel="me" target="_blank">Facebook</a>' +
             '<a href="https://www.reddit.com/user/Be333app"  rel="me" target="_blank">Reddit</a>' +
           "</div>" +
+          '<div class="foot-col">' +
+            "<h4>Created by</h4>" +
+            '<a href="https://drpowers.org"           target="_blank" rel="noopener">Dr. Powers</a>' +
+            '<a href="https://therapytallahassee.com" target="_blank" rel="noopener">Therapy Tallahassee</a>' +
+          "</div>" +
         "</div>" +
         '<div class="foot-bottom">' +
           '<div class="foot-bottom__inner">' +

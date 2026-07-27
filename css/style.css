@@ -445,7 +445,7 @@ tbody td:first-child { color: var(--ink); font-weight: 700; }
 .site-footer__inner {
   width: min(100% - 2.4rem, var(--wrap)); margin-inline: auto;
   padding-block: 3rem 2.4rem;
-  display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 2rem;
+  display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 2rem;
 }
 /* triad "3" glyph (hero) — sits inline with the italic display text */
 .triad-glyph {
