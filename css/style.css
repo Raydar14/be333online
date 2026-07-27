@@ -111,17 +111,7 @@ p { margin: 0 0 1.1em; }
   margin: 0 0 1rem;
   display: inline-flex; align-items: center; gap: .6rem;
 }
-.eyebrow::before {
-  content: ""; width: 26px; height: 1px;
-  background: var(--sage);
-}
 .eyebrow--center { justify-content: center; }
-.eyebrow--center::after {
-  content: ""; width: 26px; height: 1px; background: var(--sage);
-}
-/* opt-out of the little sage dash before an eyebrow */
-.eyebrow--bare::before { display: none; }
-.eyebrow--bare { gap: 0; }
 
 /* ----- Header (injected by js/script.js) -------------------- */
 .site-header {
@@ -190,12 +180,12 @@ p { margin: 0 0 1.1em; }
 }
 .hero__title {
   font-size: clamp(3.2rem, 7.6vw, 5.8rem);
-  font-variation-settings: "opsz" 144, "SOFT" 40, "wght" 400;
+  font-variation-settings: "opsz" 144, "SOFT" 40, "wght" 360;
   line-height: 1.0; margin: .2rem 0 .5rem;
 }
 .hero__title em {
   font-style: italic; color: var(--green);
-  font-variation-settings: "opsz" 144, "SOFT" 60, "wght" 400;
+  font-variation-settings: "opsz" 144, "SOFT" 60, "wght" 360;
 }
 /* the BE brand glyph standing in for the italic "Be" in the hero title */
 .hero__title-be {
