@@ -18,7 +18,7 @@
   var LINKS = [
     { href: "index.html",      label: "Home" },
     { href: "research.html",   label: "Research" },
-    { href: "https://be333.app", label: "Open App", external: true }
+    { href: "https://be333.app", label: "Try it now", external: true }
   ];
 
   // Which page are we on?
@@ -65,10 +65,11 @@
             '<a class="brand" href="index.html" aria-label="BE333 home">' +
               BRAND_MARK +
             "</a>" +
-            '<p class="foot-tag">A 3-minute meditation habit, created by a clinical psychologist. Pause. Breathe. Be.</p>' +
+            '<p class="foot-tag">3 minute meditation training practice</p>' +
           "</div>" +
           '<div class="foot-col">' +
             "<h4>Explore</h4>" +
+            '<a href="https://be333.app" target="_blank" rel="noopener">Try it now</a>' +
             '<a href="index.html">Home</a>' +
             '<a href="research.html">The research</a>' +
             '<a href="download.html">Download</a>' +
@@ -83,7 +84,7 @@
           "</div>" +
           '<div class="foot-col">' +
             "<h4>Created by</h4>" +
-            '<a href="https://drpowers.org"           target="_blank" rel="noopener">Dr. Powers</a>' +
+            '<a href="https://drpowers.org"           target="_blank" rel="noopener">Dr. Raychel Powers</a>' +
             '<a href="https://therapytallahassee.com" target="_blank" rel="noopener">Therapy Tallahassee</a>' +
           "</div>" +
         "</div>" +
