@@ -455,6 +455,14 @@ tbody td:first-child { color: var(--ink); font-weight: 700; }
   margin: 0 .05rem;
 }
 
+/* small inline "3" glyph — scales with surrounding text (replaces word "three") */
+.inline-three {
+  height: 1.05em; width: auto;
+  display: inline-block;
+  vertical-align: -.18em;
+  margin: 0 .04em;
+}
+
 /* big "3" glyph on the how-it-works cards */
 .card__num-glyph {
   height: 4.8rem; width: auto;
