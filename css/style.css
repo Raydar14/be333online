@@ -234,25 +234,64 @@ p { margin: 0 0 1.1em; }
 .breath__ring--2 { width: 78%;  height: 78%;  animation: ripple 8s ease-in-out infinite .15s; opacity: .65; }
 .breath__core {
   width: 56%; height: 56%; border-radius: 50%;
-  background:
-    radial-gradient(circle at 38% 32%, #ffffff 0%, var(--gold-soft) 28%, var(--gold) 65%, var(--gold-deep) 100%);
-  box-shadow: 0 24px 60px -18px rgba(0, 0, 0, .55), 0 0 80px rgba(225, 183, 37, .25), inset 0 0 40px rgba(255,255,255,.35);
   animation: breathe 8s ease-in-out infinite;
   display: grid; place-items: center; position: relative;
   overflow: hidden;
 }
 .breath__lotus {
   position: absolute; inset: 0; margin: auto;
-  width: 74%; height: auto;
+  width: 82%; height: auto;
   pointer-events: none;
-  filter: drop-shadow(0 8px 16px rgba(26, 67, 49, .45));
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .45));
   z-index: 1;
 }
+
+/* 3-minute session timer ring, sitting just outside the core */
+.breath__timer {
+  position: absolute; inset: 0; margin: auto;
+  width: 100%; height: 100%;
+  transform: rotate(-90deg);   /* start the arc at 12 o'clock */
+  pointer-events: none;
+  z-index: 0;
+}
+.breath__timer-track {
+  fill: none;
+  stroke: rgba(255, 248, 220, .10);
+  stroke-width: 2.5;
+}
+.breath__timer-progress {
+  fill: none;
+  stroke: var(--gold);
+  stroke-width: 3;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(225, 183, 37, .45));
+}
+
+/* countdown time + breath prompt stack, layered above the lotus */
+.breath__stack {
+  position: relative; z-index: 3;
+  display: flex; flex-direction: column; align-items: center; gap: .35rem;
+  pointer-events: none;
+}
+.breath__time {
+  font-family: var(--display);
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-variation-settings: "opsz" 60, "wght" 400;
+  color: var(--ink);
+  letter-spacing: .02em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, .55);
+}
 .breath__label {
-  position: absolute; inset: 0; display: grid; place-items: center;
-  font-family: var(--display); font-style: italic; font-size: 1.25rem;
-  color: var(--cream); letter-spacing: .02em; text-shadow: 0 1px 10px rgba(255, 248, 220, .6);
-  z-index: 2;
+  position: relative;
+  font-family: var(--display); font-style: italic;
+  font-size: clamp(.9rem, 1.4vw, 1.05rem);
+  color: var(--ink); opacity: .85;
+  letter-spacing: .04em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+  display: grid; place-items: center;
+  min-height: 1.4em;
 }
 .breath__label span { grid-area: 1/1; opacity: 0; }
 .breath__label .in  { animation: phase 8s ease-in-out infinite; }

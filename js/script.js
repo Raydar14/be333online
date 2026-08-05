@@ -138,10 +138,52 @@
     els.forEach(function (el) { io.observe(el); });
   }
 
+  // 3-minute session timer + countdown text on the hero breath orb
+  function wireBreathTimer() {
+    var text = document.getElementById("breath-countdown");
+    var arc  = document.querySelector(".breath__timer-progress");
+    if (!text || !arc) return;
+
+    var TOTAL  = 180;                     // 3 minutes, in seconds
+    var RADIUS = 97;                      // must match the <circle r="..."> value
+    var CIRC   = 2 * Math.PI * RADIUS;
+
+    arc.style.strokeDasharray  = CIRC;
+    arc.style.strokeDashoffset = 0;
+
+    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) {
+      text.textContent = "3:00";
+      arc.style.strokeDashoffset = 0;    // full ring, static
+      return;
+    }
+
+    var start = performance.now();
+    var lastLabel = "";
+    function tick(now) {
+      var elapsed   = (now - start) / 1000;
+      var cycle     = elapsed % TOTAL;
+      var remaining = Math.max(0, TOTAL - cycle);
+      var secs      = Math.ceil(remaining);
+      if (secs === TOTAL + 1) secs = TOTAL; // avoid a "3:01" tick right at wrap
+      var m = Math.floor(secs / 60);
+      var s = secs % 60;
+      var label = m + ":" + (s < 10 ? "0" : "") + s;
+      if (label !== lastLabel) {
+        text.textContent = label;
+        lastLabel = label;
+      }
+      arc.style.strokeDashoffset = (cycle / TOTAL) * CIRC;
+      requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
   function init() {
     injectChrome();
     wireMobileNav();
     wireReveal();
+    wireBreathTimer();
   }
 
   if (document.readyState === "loading") {

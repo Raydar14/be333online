@@ -65,15 +65,22 @@
           <p class="hero__avail">Live now in your browser <i></i> Mobile apps coming soon</p>
         </div>
 
-        <!-- Signature: a breathing guide. A 3-minute session, in miniature. -->
-        <div class="breath" aria-hidden="true">
-          <div class="breath__ring breath__ring--1"></div>
-          <div class="breath__ring breath__ring--2"></div>
+        <!-- Signature: a 3-minute breathing session, in miniature. -->
+        <div class="breath">
+          <div class="breath__ring breath__ring--1" aria-hidden="true"></div>
+          <div class="breath__ring breath__ring--2" aria-hidden="true"></div>
+          <svg class="breath__timer" viewBox="0 0 200 200" aria-hidden="true">
+            <circle class="breath__timer-track"    cx="100" cy="100" r="97"/>
+            <circle class="breath__timer-progress" cx="100" cy="100" r="97"/>
+          </svg>
           <div class="breath__core">
             <img class="breath__lotus" src="assets/lotus.svg" alt="" aria-hidden="true">
-            <div class="breath__label">
-              <span class="in">Breathe in</span>
-              <span class="out">Breathe out</span>
+            <div class="breath__stack">
+              <div class="breath__time" id="breath-countdown" aria-label="Session length: 3 minutes">3:00</div>
+              <div class="breath__label" aria-hidden="true">
+                <span class="in">Breathe in</span>
+                <span class="out">Breathe out</span>
+              </div>
             </div>
           </div>
         </div>
